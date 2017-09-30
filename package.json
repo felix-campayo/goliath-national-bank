@@ -4,11 +4,14 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "protractor",
+    "lint": "tslint \"src/**/*.ts\" --project src/tsconfig.json --type-check && tslint \"e2e/**/*.ts\" --project e2e/tsconfig.json --type-check",
+    "pree2e": "webdriver-manager update --standalone false --gecko false",
+    "pretest": "npm run lint",
+    "start": "node server.js",
+    "postinstall": "ng build --target=production -e ${NODE_ENV:-production} --aot",
+    "update": "ng update --style scss --prefix xc",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
