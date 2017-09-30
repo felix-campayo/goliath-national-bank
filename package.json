@@ -2,7 +2,8 @@
   "name": "gnb",
   "version": "0.0.0",
   "engines": {
-    "node": "8.0.0"
+    "node": "8.0.0",
+    "npm": "5.1.0"
   },
   "license": "MIT",
   "scripts": {
