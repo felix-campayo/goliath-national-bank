@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "node",
+    "start": "node server.js",
     "heroku-postbuild": "ng build --prod --aot"
   },
   "private": true,
