@@ -176,6 +176,21 @@ export class DashboardPageComponent {
   }
 
   /**
+   * Returns currency symbol
+   */
+  getCurrencySymbol(): string {
+    let ret: string;
+
+    if (this.currencySelected) {
+      ret = this.currencySelected.name;
+    } else {
+      ret = AppConfig.defaultCurrency;
+    }
+
+    return ret;
+  }
+
+  /**
    * Update isLoading structure to the given value
    * @param value
    */
@@ -186,20 +201,5 @@ export class DashboardPageComponent {
       rateList: value,
       currencyList: value
     };
-  }
-
-  /**
-   * Returns currency symbol
-   */
-  private getCurrencySymbol(): string {
-    let ret: string;
-
-    if (this.currencySelected) {
-      ret = this.currencySelected.name;
-    } else {
-      ret = AppConfig.defaultCurrency;
-    }
-
-    return ret;
   }
 }
