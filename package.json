@@ -13,7 +13,7 @@
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "pretest": "npm run lint",
     "start": "node server.js",
-    "postinstall": "ng build --target=production -e ${NODE_ENV:-production} --aot",
+    "heroku-postbuild": "ng build --target=production -e ${NODE_ENV:-production} --aot",
     "update": "ng update --style scss --prefix xc",
     "test": "ng test"
   },
