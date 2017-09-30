@@ -1,0 +1,16 @@
+// SCSS VARIABLES
+$colors: (
+  primary:    #ebedf0,
+  secondary:  #f6f7f9,
+  border:     #d9d9d9
+);
+
+// FUNCTIONS
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}

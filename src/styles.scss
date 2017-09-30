@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+.no-padding {
+  padding: 0px !important;
+}
+
+.center {
+  margin: auto;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.label {
+  margin: auto;
+}
+
+.loader {
+  text-align: center;
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.row-container {
+  min-height: 3rem;
+}
+
+body {
+  font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,55 @@
+<div class="ui-g">
+  <div class="ui-g-12 title">
+    <span>GNB Product Transactions</span>
+  </div>
+  <app-selector
+    class="ui-g-12 border no-padding"
+    [isLoading]="isLoading['productList']"
+    [field]="'name'"
+    [label]="'Select product'"
+    [list]="productList"
+    (selectedItemOutput)="selectedProduct($event)"
+  ></app-selector>
+  <app-selector
+    class="ui-g-12 border no-padding"
+    [isLoading]="isLoading['currencyList']"
+    [field]="'name'"
+    [label]="'Select currency'"
+    [list]="currencyList"
+    (selectedItemOutput)="selectedCurrency($event)"
+  ></app-selector>
+  <app-text
+    class="ui-g-12 border no-padding bold-text"
+    [label]="'Total sales:'"
+    [text]="getTotalSales()"
+  ></app-text>
+  <app-text
+    class="ui-g-12 last-border no-padding bold-text"
+    [label]="'Total amount:'"
+    [text]="getTotalAmount() | currency:getCurrencySymbol():true:numberFormat"
+  ></app-text>
+  <p-dataTable
+    class="ui-g-12 no-padding"
+    [value]="transactionList | productPipe:productSelected"
+    [paginator]="true"
+    [rows]="rows"
+    [sortOrder]="1"
+    [responsive]="true"
+    [loading]="isLoading['transactionList']"
+  >
+    <p-column *ngIf="enableProductName()" field="sku" styleClass="text-center" header="Product" sortable="true"></p-column>
+    <p-column field="amount" styleClass="text-center" header="Amount" sortable="true">
+        <ng-template let-col let-item="rowData" pTemplate="body">
+            <span>{{item[col.field] | number:numberFormat}}</span>
+        </ng-template>
+    </p-column>
+    <p-column field="currency" styleClass="text-center" header="Currency" sortable="true"></p-column>
+  </p-dataTable>
+
+  <app-dialog
+    class="ui-g-12"
+    [dialogShow]="dialogService.isShown()"
+    [title]="dialogService.getTitle()"
+    [text]="dialogService.getText()"
+  ></app-dialog>
+</div>

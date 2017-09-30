@@ -1,0 +1,21 @@
+<div class="ui-g row-container">
+  <div *ngIf="!isLoading" class="ui-g-12 selector-container">
+    <label *ngIf="label" class="ui-g-12 ui-md-3 label">{{label}}:</label>
+    <p-dropdown
+      class="ui-g-12 center"
+      *ngIf="menuList && menuList.length > 0"
+      [ngClass]="{'ui-md-9': label}"
+      [options]="menuList"
+      (onChange)="selectedItemEvent($event)"
+    ></p-dropdown>
+    <span
+      *ngIf="!menuList || (menuList && menuList.length <= 0)"
+      class="ui-g-12 center"
+      [ngClass]="{'ui-md-9': label}">
+        No records found
+    </span>
+  </div>
+  <div *ngIf="isLoading" class="ui-g-12 loader">
+      <img [src]="'assets/img/loader.gif'" alt="Loading ...">
+  </div>
+</div>

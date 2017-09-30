@@ -1,0 +1,12 @@
+<p-dialog
+header="{{title}}"
+[(visible)]="dialogShow"
+[closable]="false"
+[positionTop]="100"
+[modal]="true"
+>
+<div class="dialog-container">
+    <span>{{text}}</span>
+    <button pButton type="button" label="Accept" (click)="closeClick()"></button>
+</div>
+</p-dialog>
