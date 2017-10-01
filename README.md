@@ -3,7 +3,7 @@
 
 **Demo**
 
-http://goliath-national-bank.herokuapp.com
+https://goliath-national-bank.herokuapp.com
 
 **Description** 
 
