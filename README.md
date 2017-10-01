@@ -1,6 +1,13 @@
 # **International Business Men**
+# **International Business Men**
 *(Maximum amount of time allowed 3 hours Task)*
  
+**Demo**
+
+http://goliath-national-bank.herokuapp.com
+
+**Description**
+
 You work for GNB (Goliath National Bank), and your manager, Barney Stinson, has asked you to design and implement a mobile application to help the firm executives who are always flying around the globe. Your executives need a list of every product GNB trades with, and the total sum of sales of those products in different currencies.
 
 For this task you have to use a web service. This web service can provide its results both in XML or in JSON format. You are free to choose the one you feel more comfortable with (you only need to use one of the formats). To use the XML format use the .xml extension; to use the JSON format use the .json extension. The web service provides you with two different sets of data:
