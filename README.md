@@ -1,5 +1,4 @@
 # **International Business Men**
-# **International Business Men**
 *(Maximum amount of time allowed 3 hours Task)*
  
 **Demo**
